@@ -494,4 +494,10 @@
     <string name="yes_button" msgid="1120514817091581293">"Ja"</string>
     <string name="no_button" msgid="8965841385742548947">"Nee"</string>
     <string name="sdn_contacts_directory_search_label" msgid="9146122809408008443">"Providerservicenummers"</string>
+    <string name="senior_menu_title">"Eenvoudig Menu"</string>
+    <string name="senior_btn_add_contact">"Contact toevoegen"</string>
+    <string name="senior_btn_call_contact">"Contact bellen"</string>
+    <string name="senior_btn_view_contacts">"Contacten bekijken"</string>
+    <string name="senior_btn_edit_contact">"Contact bewerken"</string>
+    <string name="senior_btn_delete_contact">"Contact verwijderen"</string>
 </resources>

@@ -73,6 +73,18 @@
         android:supportsRtl="true"
         android:taskAffinity="android.task.contacts"
         android:usesCleartextTraffic="false">
+        <!-- Senior-friendly menu activity with large buttons -->
+        <activity
+            android:name=".activities.SeniorMenuActivity"
+            android:exported="true"
+            android:theme="@style/LaunchScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
         <!-- The main Contacts activity with the contact list, favorites, and groups. -->
         <activity
             android:name=".activities.PeopleActivity"
@@ -84,14 +96,6 @@
             android:visibleToInstantApps="true"
             >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.APP_CONTACTS"/>
-            </intent-filter>
-            <intent-filter>
                 <action android:name="com.android.contacts.action.LIST_DEFAULT"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -99,7 +103,13 @@
             </intent-filter>
 
             <intent-filter>
-                <action android:name="com.android.contacts.action.LIST_CONTACTS"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.APP_CONTACTS"/>
+            </intent-filter>
+
+            <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.TAB"/>
