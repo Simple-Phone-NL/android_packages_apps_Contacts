@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Senior-friendly menu with large buttons for accessibility -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/senior_menu_title"
+        android:textSize="32sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/senior_menu_title" />
+
+    <!-- Button: Add Contact -->
+    <Button
+        android:id="@+id/btn_add_contact"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp"
+        android:text="@string/senior_btn_add_contact"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="@drawable/senior_button_add"
+        android:contentDescription="@string/senior_btn_add_contact" />
+
+    <!-- Button: Call Contact -->
+    <Button
+        android:id="@+id/btn_call_contact"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp"
+        android:text="@string/senior_btn_call_contact"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="@drawable/senior_button_call"
+        android:contentDescription="@string/senior_btn_call_contact" />
+
+    <!-- Button: View Contacts -->
+    <Button
+        android:id="@+id/btn_view_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp"
+        android:text="@string/senior_btn_view_contacts"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="@drawable/senior_button_view"
+        android:contentDescription="@string/senior_btn_view_contacts" />
+
+    <!-- Button: Edit Contact -->
+    <Button
+        android:id="@+id/btn_edit_contact"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp"
+        android:text="@string/senior_btn_edit_contact"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="@drawable/senior_button_edit"
+        android:contentDescription="@string/senior_btn_edit_contact" />
+
+    <!-- Button: Delete Contact -->
+    <Button
+        android:id="@+id/btn_delete_contact"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/senior_btn_delete_contact"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="@drawable/senior_button_delete"
+        android:contentDescription="@string/senior_btn_delete_contact" />
+
+</LinearLayout>

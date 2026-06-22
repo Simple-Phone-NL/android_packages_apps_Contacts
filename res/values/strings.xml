@@ -1555,4 +1555,12 @@
     <!-- The label to display as a section header in the contact list for an SDN directory [CHAR LIMIT=40] -->
     <string name="sdn_contacts_directory_search_label">Carrier service numbers</string>
 
+    <!-- Senior menu strings -->
+    <string name="senior_menu_title">Simple Menu</string>
+    <string name="senior_btn_add_contact">Add Contact</string>
+    <string name="senior_btn_call_contact">Call Contact</string>
+    <string name="senior_btn_view_contacts">View Contacts</string>
+    <string name="senior_btn_edit_contact">Edit Contact</string>
+    <string name="senior_btn_delete_contact">Delete Contact</string>
+
 </resources>
