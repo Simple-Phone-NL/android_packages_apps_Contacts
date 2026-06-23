@@ -26,6 +26,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.contacts.R;
+import com.android.contacts.interactions.ContactDeletionInteraction;
 import com.android.contacts.util.ImplicitIntentsUtil;
 
 /**
@@ -134,8 +135,6 @@ public class SeniorMenuActivity extends AppCompatActivity {
     }
 
     private void deleteContact(Uri contactUri) {
-        Intent deleteIntent = new Intent(Intent.ACTION_DELETE);
-        deleteIntent.setData(contactUri);
-        startActivity(deleteIntent);
+        ContactDeletionInteraction.start(this, contactUri, false);
     }
 }
