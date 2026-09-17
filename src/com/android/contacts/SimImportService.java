@@ -32,6 +32,8 @@ import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import android.util.TimingLogger;
 
+import androidx.core.content.ContextCompat;
+
 import com.android.contacts.activities.PeopleActivity;
 import com.android.contacts.database.SimContactDao;
 import com.android.contacts.model.SimCard;
@@ -140,7 +142,7 @@ public class SimImportService extends Service {
      */
     public static void startImport(Context context, int subscriptionId,
             ArrayList<SimContact> contacts, AccountWithDataSet targetAccount) {
-        context.startService(new Intent(context, SimImportService.class)
+        ContextCompat.startForegroundService(context, new Intent(context, SimImportService.class)
                 .putExtra(EXTRA_SIM_CONTACTS, contacts)
                 .putExtra(EXTRA_SIM_SUBSCRIPTION_ID, subscriptionId)
                 .putExtra(EXTRA_ACCOUNT, targetAccount));

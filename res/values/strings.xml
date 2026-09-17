@@ -1562,5 +1562,6 @@
     <string name="senior_btn_view_contacts">View Contacts</string>
     <string name="senior_btn_edit_contact">Edit Contact</string>
     <string name="senior_btn_delete_contact">Delete Contact</string>
+    <string name="senior_btn_settings">Settings</string>
 
 </resources>

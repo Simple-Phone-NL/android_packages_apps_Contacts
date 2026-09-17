@@ -27,6 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.contacts.R;
 import com.android.contacts.interactions.ContactDeletionInteraction;
+import com.android.contacts.preference.ContactsPreferenceActivity;
 import com.android.contacts.util.ImplicitIntentsUtil;
 
 /**
@@ -40,6 +41,7 @@ public class SeniorMenuActivity extends AppCompatActivity {
     private Button btnViewContacts;
     private Button btnEditContact;
     private Button btnDeleteContact;
+    private Button btnSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +58,7 @@ public class SeniorMenuActivity extends AppCompatActivity {
         btnViewContacts = findViewById(R.id.btn_view_contacts);
         btnEditContact = findViewById(R.id.btn_edit_contact);
         btnDeleteContact = findViewById(R.id.btn_delete_contact);
+        btnSettings = findViewById(R.id.btn_settings);
     }
 
     private void setUpClickListeners() {
@@ -64,6 +67,7 @@ public class SeniorMenuActivity extends AppCompatActivity {
         btnViewContacts.setOnClickListener(v -> onViewContactsClicked());
         btnEditContact.setOnClickListener(v -> onEditContactClicked());
         btnDeleteContact.setOnClickListener(v -> onDeleteContactClicked());
+        btnSettings.setOnClickListener(v -> onSettingsClicked());
     }
 
     private void onAddContactClicked() {
@@ -93,6 +97,10 @@ public class SeniorMenuActivity extends AppCompatActivity {
         // Open contacts list to select a contact to delete
         Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
         startActivityForResult(intent, 3);
+    }
+
+    private void onSettingsClicked() {
+        startActivity(new Intent(this, ContactsPreferenceActivity.class));
     }
 
     @Override

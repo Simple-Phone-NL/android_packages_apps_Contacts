@@ -30,6 +30,7 @@ public class OnBootOrUpgradeReceiver extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(action)
                 || Intent.ACTION_MY_PACKAGE_REPLACED.equals(action)) {
             ContactsNotificationChannelsUtil.createDefaultChannel(context);
+            AutoSimImportReceiver.startImport(context, goAsync());
         }
     }
 }
