@@ -370,6 +370,13 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".interactions.AutoSimImportReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
         <activity-alias
             android:name="ContactShortcut"
             android:icon="@drawable/logo_quick_contacts_color_44in48dp"
